@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    <title>Modifier un article</title>
+{% endblock %}
+
+{% block content %}
+    <h1>Modifier un article</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input class="btn btn-submit" type="submit" value="Modifier">
+    </form>
+
+{% endblock %}
